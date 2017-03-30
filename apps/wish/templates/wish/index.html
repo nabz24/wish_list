@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    {% for message in messages %}
+  <li class={{message.tags}}>{{message}}</li>
+  {% endfor %}
+
+  <div class = "reg">
+    <h1> Welcome </h1>
+    <form action = "/registerprocess" method = "post">
+      {% csrf_token %}
+      <h3>Name: </h3> <input type = "text" name = "name"><br>
+      <h3>Username: </h3> <input type = "text" name = "username"><br>
+      <h3>Password: </h3> <input type = "text" name = "password"> <br>
+      <h3>Confrim PW: </h3><input type = "text" name = "conf_pass"><br>
+      <h3>Date Hired: </h3><input type = "date" name = "date_hired"><br>
+      <input type = "Submit" value = "Register">
+    </form>
+  </div>
+
+  <div class = "login_section">
+
+    <h1>Login</h1>
+    <form action = "/loginprocess" method = "post">
+      {% csrf_token %}
+    <h3>Username: </h3><input type = "text" name ="log_username"><br>
+    <h3>Password: </h3><input type = "text" name ="log_password"><br>
+    <input type= "submit" value = "Login">
+  </form>
+
+  </div>
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="hh">
+      <a href="/dashboard">Home</a>
+      <a href="/logout">Logout</a>
+    </div>
+
+
+    {% for message in messages %}
+      <li class={{message.tags}}>{{message}}</li>
+      {% endfor %}
+
+    <form action = "/addWishProcess" method = "post">
+          {% csrf_token %}
+          <h3>Item/Product: </h3> <input type = "text" name = "item"><br>
+          <input type = "Submit" value = "Add">
+    </form>
+
+  </body>
+</html>
