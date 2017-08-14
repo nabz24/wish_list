@@ -1,0 +1,56 @@
+.yoo {
+  background-image: url("http://www.desertskycommunityschool.org/wp-content/uploads/2013/02/wishlist_256.gif");
+  background-repeat: no-repeat;
+  background-position: left;
+
+
+}
+
+.add{
+  border: solid 2px blue;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+
+.reg{
+
+text-align: center;
+
+}
+
+.login_section{
+
+  text-align: center;
+
+}
+
+.error {
+
+  text-align: center;
+  background-color: red;
+  font-size: 20px;
+
+}
+
+.success {
+  background-color: green;
+  text-align: center;
+}
+
+}
+.yo {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+
+}
+
+.formItem{
+  text-align: center;
+}
+
+.addedWish{
+  color: green;
+  font-size: 20px;
+}

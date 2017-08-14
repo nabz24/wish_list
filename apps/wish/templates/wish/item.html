@@ -1,3 +1,13 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'wish/style.css' %}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,10 +22,10 @@
       <h2>{{wishs.item}}</h2>
     </div>
     <div class="item_wishers">
-      <h3>Users who added this product/item under thier wish list:</h3>
+      <h3>Users who added this product/item under their wish list:</h3>
 
       {% for join in wishs.wish_item.all %}
-      <p>{{join.name}}</p>
+      <p class = "addedWish">- {{join.name}}</p>
       {% endfor %}
 
   </body>

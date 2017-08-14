@@ -18,13 +18,13 @@ class UsersManager(models.Manager):
         error_list = []
         cur_date = datetime.datetime.today().strftime('%Y-%m-%d')
         if not Name_REGEX.match(postData['name']):
-            error_list.append("First name is not valid")
+            error_list.append("First name is not valid. Must be be all letters and longer than three characters")
         if not Name_REGEX.match(postData['username']):
-            error_list.append("Username not valid")
+            error_list.append("Username is not valid. Must be be all letters and between 3 to 30 characters in length")
         if not Name_REGEX.match(postData['username']):
-            error_list.append("username is not vaid")
+            error_list.append("username is not valid")
         if not Password_REGEX.match(postData["password"]):
-            error_list.append('Password does not match')
+            error_list.append('Password must be at least 8 characters')
         if not cur_date > postData['date_hired']:
             error_list.append('Date hired is after current date')
         if not postData['password'] == postData['conf_pass']:
