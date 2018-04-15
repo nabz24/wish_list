@@ -1,11 +1,17 @@
-.yoo {
-  background-image: url("http://www.desertskycommunityschool.org/wp-content/uploads/2013/02/wishlist_256.gif");
+.container.yoo {
+  background-image: url("../images/wish_list_graphic.jpg");
   background-repeat: no-repeat;
   background-position: left;
-
-
+  padding: 0px;
+  margin: 0px;
+  background-image: image(rotate(30deg));
+  width: 100%;
 }
 
+.container {
+  padding: 0px;
+  margin: 0px;
+}
 .add{
   border: solid 2px blue;
   font-size: 20px;
@@ -28,7 +34,7 @@ text-align: center;
 .error {
 
   text-align: center;
-  background-color: red;
+  color: red;
   font-size: 20px;
 
 }

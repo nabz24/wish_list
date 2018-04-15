@@ -1,7 +1,7 @@
 <!-- Latest compiled and minified CSS -->
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'wish/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'wish/css/style.css' %}" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
 <!-- Optional theme -->
@@ -15,8 +15,9 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <div class = "container yoo">
   <body>
+  <div class = "container yoo">
+
 
     {% for message in messages %}
   <li class={{message.tags}}>{{message}}</li>
@@ -49,6 +50,7 @@
 
   </div>
 
-  </body>
+
 </div>
+</body>
 </html>
