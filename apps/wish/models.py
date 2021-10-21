@@ -27,6 +27,8 @@ class UsersManager(models.Manager):
             error_list.append('Password must be at least 8 characters')
         if not cur_date > postData['date_hired']:
             error_list.append('Date hired is after current date')
+        if postData['date_hired'] is "":
+            error_list.append('Invalid Date')
         if not postData['password'] == postData['conf_pass']:
             error_list.append('Password does not match confirm password')
 
